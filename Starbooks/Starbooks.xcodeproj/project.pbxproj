@@ -21,6 +21,8 @@
 		453088832AD3E33C003ED70E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 453088822AD3E33C003ED70E /* SnapKit */; };
 		453088862AD3E363003ED70E /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 453088852AD3E363003ED70E /* Then */; };
 		453088882AD3E57E003ED70E /* UIComponentStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453088872AD3E57E003ED70E /* UIComponentStyle.swift */; };
+		4530888A2AD3E673003ED70E /* MenuSuggestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453088892AD3E673003ED70E /* MenuSuggestionCollectionViewCell.swift */; };
+		4530888D2AD3E952003ED70E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4530888C2AD3E952003ED70E /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,7 @@
 		4530887D2AD3D692003ED70E /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		4530887F2AD3DDD5003ED70E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		453088872AD3E57E003ED70E /* UIComponentStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponentStyle.swift; sourceTree = "<group>"; };
+		453088892AD3E673003ED70E /* MenuSuggestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSuggestionCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4530888D2AD3E952003ED70E /* Kingfisher in Frameworks */,
 				453088832AD3E33C003ED70E /* SnapKit in Frameworks */,
 				453088862AD3E363003ED70E /* Then in Frameworks */,
 			);
@@ -119,6 +123,7 @@
 				4530887D2AD3D692003ED70E /* ListViewController.swift */,
 				4530887F2AD3DDD5003ED70E /* Item.swift */,
 				453088872AD3E57E003ED70E /* UIComponentStyle.swift */,
+				453088892AD3E673003ED70E /* MenuSuggestionCollectionViewCell.swift */,
 			);
 			path = Starbooks;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 			packageProductDependencies = (
 				453088822AD3E33C003ED70E /* SnapKit */,
 				453088852AD3E363003ED70E /* Then */,
+				4530888C2AD3E952003ED70E /* Kingfisher */,
 			);
 			productName = Starbooks;
 			productReference = 453088452AD3D3AD003ED70E /* Starbooks.app */;
@@ -235,6 +241,7 @@
 			packageReferences = (
 				453088812AD3E33C003ED70E /* XCRemoteSwiftPackageReference "SnapKit" */,
 				453088842AD3E363003ED70E /* XCRemoteSwiftPackageReference "Then" */,
+				4530888B2AD3E952003ED70E /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 453088462AD3D3AD003ED70E /* Products */;
 			projectDirPath = "";
@@ -278,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4530888A2AD3E673003ED70E /* MenuSuggestionCollectionViewCell.swift in Sources */,
 				453088882AD3E57E003ED70E /* UIComponentStyle.swift in Sources */,
 				4530887C2AD3D685003ED70E /* HomeViewController.swift in Sources */,
 				4530887E2AD3D692003ED70E /* ListViewController.swift in Sources */,
@@ -634,6 +642,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		4530888B2AD3E952003ED70E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -646,6 +662,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 453088842AD3E363003ED70E /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		4530888C2AD3E952003ED70E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4530888B2AD3E952003ED70E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 

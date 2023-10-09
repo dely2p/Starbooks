@@ -38,7 +38,16 @@ class HomeViewController: UIViewController {
     }
     
     private func setDataSource() {
-        
+        dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
+            switch itemIdentifier {
+            case .menuSuggestion(let menuItem):
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MenuSuggestionCollectionViewCell.cellIdentifier, for: indexPath) as? MenuSuggestionCollectionViewCell else { return UICollectionViewCell() }
+                cell.config(menuItem.imageUrl, menuItem.title)
+                return cell
+            case .event(let eventItem):
+                <#code#>
+            }
+        })
     }
     
     private func setSnapShot() {
