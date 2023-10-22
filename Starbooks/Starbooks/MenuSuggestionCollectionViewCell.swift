@@ -64,12 +64,13 @@ extension MenuSuggestionCollectionViewCell: UIComponentStyle {
         menuImageView.snp.makeConstraints {
             $0.top.leading.equalToSuperview().offset(5)
             $0.trailing.equalToSuperview().offset(-5)
-            $0.width.height.equalTo(20)
+            $0.width.height.equalTo(100)
         }
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(menuImageView.snp.bottom).offset(5)
             $0.centerX.equalToSuperview()
             $0.bottom.equalToSuperview().offset(-5)
+            $0.height.equalTo(20)
         }
     }
 }

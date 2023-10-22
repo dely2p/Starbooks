@@ -23,6 +23,8 @@
 		453088882AD3E57E003ED70E /* UIComponentStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453088872AD3E57E003ED70E /* UIComponentStyle.swift */; };
 		4530888A2AD3E673003ED70E /* MenuSuggestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453088892AD3E673003ED70E /* MenuSuggestionCollectionViewCell.swift */; };
 		4530888D2AD3E952003ED70E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4530888C2AD3E952003ED70E /* Kingfisher */; };
+		4530888F2AD3EB91003ED70E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4530888E2AD3EB91003ED70E /* HomeViewModel.swift */; };
+		453088912AD3EDBF003ED70E /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453088902AD3EDBF003ED70E /* ViewModelType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		4530887F2AD3DDD5003ED70E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		453088872AD3E57E003ED70E /* UIComponentStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponentStyle.swift; sourceTree = "<group>"; };
 		453088892AD3E673003ED70E /* MenuSuggestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSuggestionCollectionViewCell.swift; sourceTree = "<group>"; };
+		4530888E2AD3EB91003ED70E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		453088902AD3EDBF003ED70E /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,8 @@
 				4530887F2AD3DDD5003ED70E /* Item.swift */,
 				453088872AD3E57E003ED70E /* UIComponentStyle.swift */,
 				453088892AD3E673003ED70E /* MenuSuggestionCollectionViewCell.swift */,
+				4530888E2AD3EB91003ED70E /* HomeViewModel.swift */,
+				453088902AD3EDBF003ED70E /* ViewModelType.swift */,
 			);
 			path = Starbooks;
 			sourceTree = "<group>";
@@ -286,12 +292,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4530888A2AD3E673003ED70E /* MenuSuggestionCollectionViewCell.swift in Sources */,
+				4530888F2AD3EB91003ED70E /* HomeViewModel.swift in Sources */,
 				453088882AD3E57E003ED70E /* UIComponentStyle.swift in Sources */,
 				4530887C2AD3D685003ED70E /* HomeViewController.swift in Sources */,
 				4530887E2AD3D692003ED70E /* ListViewController.swift in Sources */,
 				453088492AD3D3AD003ED70E /* AppDelegate.swift in Sources */,
 				453088532AD3D3AD003ED70E /* Starbooks.xcdatamodeld in Sources */,
 				453088802AD3DDD5003ED70E /* Item.swift in Sources */,
+				453088912AD3EDBF003ED70E /* ViewModelType.swift in Sources */,
 				4530884B2AD3D3AD003ED70E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

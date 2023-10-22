@@ -15,6 +15,8 @@ class HomeViewController: UIViewController {
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: .init())
     private var dataSource: UICollectionViewDiffableDataSource<Section, Item>?
     
+    var viewModel: HomeViewModel = HomeViewModel()
+    
     
     // MARK: - ViewDidLoad
     
@@ -28,7 +30,8 @@ class HomeViewController: UIViewController {
         makeConstraints()
         
         // registration CollectionView
-//        collectionView.register(Cell.self, forCellWithReuseIdentifier: Cell.identifier)
+        collectionView.register(MenuSuggestionCollectionViewCell.self, forCellWithReuseIdentifier: MenuSuggestionCollectionViewCell.cellIdentifier)
+        collectionView.setCollectionViewLayout(createLayout(), animated: true)
         
         // set DataSource
         setDataSource()
@@ -45,13 +48,50 @@ class HomeViewController: UIViewController {
                 cell.config(menuItem.imageUrl, menuItem.title)
                 return cell
             case .event(let eventItem):
-                <#code#>
+                return UICollectionViewCell()
             }
         })
     }
     
     private func setSnapShot() {
+        // menu suggestion section
+        var snapShot = NSDiffableDataSourceSnapshot<Section, Item>()
+        snapShot.appendSections([Section(id: "MenuSuggestion")])
+        let menuItems = viewModel.menuSuggestionItems.compactMap {  Item.menuSuggestion($0) }
         
+        snapShot.appendItems(menuItems, toSection: Section(id: "MenuSuggestion"))
+        dataSource?.apply(snapShot)
+    }
+    
+    private func createLayout() -> UICollectionViewCompositionalLayout {
+        
+        let config = UICollectionViewCompositionalLayoutConfiguration()
+        config.interSectionSpacing = 30
+        
+        // section index
+        return UICollectionViewCompositionalLayout (sectionProvider: { [weak self] sectionIndex, _ in
+            switch sectionIndex {
+                case 0:
+                    return self?.createMenuSection()
+                default:
+                    return self?.createMenuSection()
+            }
+        }, configuration: config)
+    }
+    
+    private func createMenuSection() -> NSCollectionLayoutSection {
+        // item
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.8))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        // group
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        
+        // section
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .groupPaging
+        return section
     }
 }
 
